@@ -5,8 +5,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly_express as px
-import folium
-import geopandas as gpd
 import streamlit.components.v1 as components
 import base64
 from wordcloud import WordCloud
@@ -26,9 +24,8 @@ logo = r"C:\Users\Marta\Documents\GitHub\Feverup_events_and_prices\Streamlit_app
 eventos_feverup = r"C:\Users\Marta\Documents\GitHub\Feverup_events_and_prices\Streamlit_app_Feverup\img\events.png"
 
 
-#---------------------------- COSAS QUE SE VAN A USAR EN TODA LA APP ----------------------------#
+#---------------------------- DATOS DE LA PÁGINA ----------------------------#
 events = pd.read_csv(r"C:\Users\Marta\Desktop\BOOTCAMP_DATA_ANALYTICS\DATA\TEMARIO\Modulo_3\8-PROYECTO_FINAL\data\events_processed.csv")
-tickets = pd.read_csv(r"C:\Users\Marta\Desktop\BOOTCAMP_DATA_ANALYTICS\DATA\TEMARIO\Modulo_3\8-PROYECTO_FINAL\data\tickets_processed.csv")
 
 
 
@@ -36,9 +33,7 @@ tickets = pd.read_csv(r"C:\Users\Marta\Desktop\BOOTCAMP_DATA_ANALYTICS\DATA\TEMA
 
 
 #---------------------------- HEADER ----------------------------#
-st.image(logo, width=200)    # Ancho del logo
-
-st.title("")
+st.image(logo, width=200)    
 st.title("")
 st.markdown("<h1 style='color: #38b6ff; font-size: 52px;'>New entertainment with a multitude of possibilities!</h1>", unsafe_allow_html=True)
 st.title("")
@@ -54,7 +49,7 @@ st.title("")
 st.title("")
 st.markdown("<h1 style='color: #38b6ff;'>Let's go with trending events!</h1>", unsafe_allow_html=True)
 st.title("")
-st.write("<h5>The original data contains 233725 rows and 13 columns and it contain events from the USA, Canada, the United Kingdom and Ireland. The events start on September 18, 2023 and continue until August 4, 2027. There are a total of 209255 events from the beginning until April 1st.</h5>", unsafe_allow_html=True)
+st.write("<h5>The original data contains 233725 rows and 13 columns with 3085 unique events. Data contain events from the USA, Canada, the United Kingdom and Ireland. The events start on September 18, 2023 and continue until August 4, 2027. There are a total of 209255 events from the beginning until April 1st.</h5>", unsafe_allow_html=True)
 st.title("")
 
 
@@ -123,23 +118,23 @@ st.title("")
 
 col1, col2 = st.columns(2)
 with col1:
-    if st.checkbox('Trending category "MIX". What does it contain?'):                                           # GRÁFICA WORDCLOUD MIX                          
+    if st.checkbox('Trending category "MIX". What does it contain?'):                                       # GRÁFICA WORDCLOUD MIX                          
         st.title("")
-        mix_events = events[events['event_category']=='MIX']                                                    # Filtrar eventos categoría 'MIX'
-        titles = ' '.join(mix_events['title'])                                                                  # Concatenar todos los títulos en una sola cadena
-        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(titles)                 # Crear un objeto WordCloud
-        plt.figure(figsize=(12, 8))                                                                             # Mostrar el gráfico de palabras
-        plt.imshow(wordcloud, interpolation='bicubic')                                                          # imshow() muestra el gráfico de palabras generado por WordCloud. Opciones de interpolación: 'bilinear', 'nearest', 'bicubic', 'hamming'
+        mix_events = events[events['event_category']=='MIX']                                                # Filtrar eventos categoría 'MIX'
+        titles = ' '.join(mix_events['title'])                                                              # Concatenar todos los títulos en una sola cadena
+        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(titles)             # Crear un objeto WordCloud
+        plt.figure(figsize=(12, 8))                                                                         # Mostrar el gráfico de palabras
+        plt.imshow(wordcloud, interpolation='bicubic')                                                      # imshow() muestra el gráfico de palabras generado por WordCloud. Opciones de interpolación: 'bilinear', 'nearest', 'bicubic', 'hamming'
         plt.axis('off') 
         st.image(wordcloud.to_array())
 with col2:
     if st.checkbox('Trending category "IGHTLIF"'): 
         st.title("")
-        mix_events = events[events['event_category']=='IGHTLIF']                                                # Filtrar eventos categoría 'IGHTLIF'
-        titles = ' '.join(mix_events['title'])                                                                  # Concatenar todos los títulos en una sola cadena
-        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(titles)                 # Crear un objeto WordCloud
+        mix_events = events[events['event_category']=='IGHTLIF']                                            # Filtrar eventos categoría 'IGHTLIF'
+        titles = ' '.join(mix_events['title'])                                                              # Concatenar todos los títulos en una sola cadena
+        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(titles)             # Crear un objeto WordCloud
         plt.figure(figsize=(10, 6))
-        plt.imshow(wordcloud, interpolation='bicubic')                                                          # imshow() muestra el gráfico de palabras generado por WordCloud
+        plt.imshow(wordcloud, interpolation='bicubic')                                                      # imshow() muestra el gráfico de palabras generado por WordCloud
         plt.axis('off')
         st.image(wordcloud.to_array())
 
@@ -153,7 +148,7 @@ st.title("")
 st.title("")
 
 
-st.subheader("TOP5 events in MIX category")
+st.subheader("TOP 5 - MIX category")
 st.title("")
 
 col1, col2, col3, col4, col5 = st.columns(5)
@@ -193,23 +188,11 @@ st.write("Las Vegas Escape Game Private Adventure: https://feverup.com/m/113713"
 st.write("Las Vegas Escape Game Private Adventure: https://feverup.com/m/127411")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 st.title("")
 st.title("")
 st.title("")
 
-st.subheader("How many events have there been in the last few months? Which is the trend day? And the trend time?")
+st.subheader("How many events have there been in the last few months? Which is the trend day and time?")
 
 col1, col2 = st.columns(2)
 with col1:
@@ -242,7 +225,7 @@ with col2:                                                                      
 
     fig.update_layout(width=1200, height=500,                                                               # Ajustar el tamaño de la figura
                         xaxis_title='', yaxis_title='',                                                     # Ocultar los nombres de los ejes
-                        title_text='<b>Total events by day</b>', title_x=0.38)                                     # Centrar el título y ponerlo en negrita
+                        title_text='<b>Total events by day</b>', title_x=0.38)                              # Centrar el título y ponerlo en negrita
     fig.update_yaxes(range=[0, 80000])                                                                      # Establecer el rango del eje y para que sea igual que en la gráfica lineal
     st.plotly_chart(fig)
 
@@ -264,8 +247,8 @@ with col1:
     fig.update_traces(textfont_size=16)
     st.plotly_chart(fig)
         
-with col2:                                                                                           # GRÁFICO PASTEL PORCENTAJE EVENTOS EN CADA FRANJA HORARIA             
-    def get_time_slot(hour):                                                                        # Función para crear nueva columna con franja horaria de los eventos (morning, afternoon, night)
+with col2:                                                                                                  # GRÁFICO PASTEL PORCENTAJE EVENTOS EN CADA FRANJA HORARIA             
+    def get_time_slot(hour):                                                                                # Función para crear nueva columna con franja horaria de los eventos (morning, afternoon, night)
         if hour < 12:
             return 'morning'
         elif hour < 18:
@@ -273,14 +256,14 @@ with col2:                                                                      
         else:
             return 'night'
 
-    events['time_slot'] = events['datetime_local'].apply(lambda x: get_time_slot(x.hour))           # Aplicar la función a la columna 'datetime_local' para obtener la franja horaria                                                                                                 
-    time_slot_counts = events['time_slot'].value_counts()                                           # Calcular el total de eventos en cada franja horaria
+    events['time_slot'] = events['datetime_local'].apply(lambda x: get_time_slot(x.hour))                   # Aplicar la función a la columna 'datetime_local' para obtener la franja horaria                                                                                                 
+    time_slot_counts = events['time_slot'].value_counts()                                                   # Calcular el total de eventos en cada franja horaria
     fig = px.pie(time_slot_counts, 
                 values=time_slot_counts.values, 
                 names=time_slot_counts.index, 
                 color_discrete_sequence=px.colors.diverging.Portland)
-    fig.update_layout(width=1200, height=500,                                                       # Ajustar el tamaño de la figura
-                        title_text='<b>% of events by time</b>', title_x=0.38,                  # Centrar el título y ponerlo en negrita
-                        xaxis_title='', yaxis_title='')                                             # Ocultar los nombres de los ejes
+    fig.update_layout(width=1200, height=500,                                                               # Ajustar el tamaño de la figura
+                        title_text='<b>% of events by time</b>', title_x=0.38,                              # Centrar el título y ponerlo en negrita
+                        xaxis_title='', yaxis_title='')                                                     # Ocultar los nombres de los ejes
     fig.update_traces(textinfo='percent+label', textfont_size=16)  
     st.plotly_chart(fig)
