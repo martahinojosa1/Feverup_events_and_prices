@@ -3,7 +3,7 @@ import joblib
 import streamlit as st
 
 # Carga el modelo desde el archivo .pkl
-modelo = joblib.load("modelos\Gradient_Boosting_Regressor.pkl")
+modelo = joblib.load("modelos/Gradient_Boosting_Regressor.pkl")
 
 
 # Título predictor
