@@ -1,23 +1,23 @@
 # Feverup_events_and_prices
-
-
+                                  
+                                
 Analysis and research project - Feverup (event trends and prices).
-
-
+                          
+                                
 In this repository, you will find two studies (both databases are samples of events from 4 countries (USA, Canada, Great Britain, and Ireland):
 1. Analysis of data on the trends and types of most popular leisure events through a real search app (Feverup).
 2. Analysis of prices and earnings according to events (Feverup).
-
-
-
+                            
+                                  
+                                                                
 Live Application!
-
+                                      
 Do you want to explore the data on your own?
-
+                                            
 You can try it right now and play with the data, you'll see how interesting it is! It's hosted on Streamlit, and you can access it by clicking the following link: https://feverup.streamlit.app/
-
-
-
+                                      
+                                    
+                                                  
 🔍 Data Acquisition:
 The data comes from 2 datasets in the AWS marketplace. Both databases are located in the Amazon S3 (Simple Storage Service) and are independent.
 
