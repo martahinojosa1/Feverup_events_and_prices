@@ -1,5 +1,5 @@
 #---------------------------- LIBRERÍAS ----------------------------#
-import joblib   # añadir a requirements
+import joblib  
 import streamlit as st
 
 # Carga el modelo desde el archivo .pkl
