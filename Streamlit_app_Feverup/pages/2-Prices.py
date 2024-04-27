@@ -15,7 +15,7 @@ st.set_page_config(
     layout="wide"                                        
 )
 
-logo = r"C:\Users\Marta\Documents\GitHub\Feverup_events_and_prices\Streamlit_app_Feverup\img\logo.png"
+logo = 'Streamlit_app_Feverup/img/logo.png'
 
 
 
