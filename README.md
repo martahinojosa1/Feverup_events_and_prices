@@ -1,4 +1,4 @@
-# Feverup_events_and_prices
+# Feverup - Trend events & Price analysis
                                   
                                 
 Analysis and research project - Feverup (event trends and prices).
