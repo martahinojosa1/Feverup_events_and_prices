@@ -21,7 +21,8 @@ logo = r"C:\Users\Marta\Documents\GitHub\Feverup_events_and_prices\Streamlit_app
 
 
 #---------------------------- DATOS DE LA PÁGINA ----------------------------#
-tickets = pd.read_csv(r"C:\Users\Marta\Desktop\BOOTCAMP_DATA_ANALYTICS\DATA\TEMARIO\Modulo_3\8-PROYECTO_FINAL\data\tickets_processed.csv")
+link_data = 'https://docs.google.com/spreadsheets/d/1QvsVM0K2YZWGuFNoKJzaZrRFsvCtmYbMCTvf3twFCgY/export?format=csv'
+tickets = pd.read_csv(link_data)
 
 
 

@@ -24,7 +24,8 @@ eventos_feverup = r"C:\Users\Marta\Documents\GitHub\Feverup_events_and_prices\St
 
 
 #---------------------------- DATOS DE LA PÁGINA ----------------------------#
-events = pd.read_csv(r"C:\Users\Marta\Desktop\BOOTCAMP_DATA_ANALYTICS\DATA\TEMARIO\Modulo_3\8-PROYECTO_FINAL\data\events_processed.csv")
+link_data = 'https://docs.google.com/spreadsheets/d/1cTW5rp8av-12UuJ4zDkrqTRUDR4hokKSvWPqKl_WO3g/export?format=csv'                         # 'export?format=csv' -> añadir para que exporte correctamente desde google sheets
+events = pd.read_csv(link_data)
 
 
 
