@@ -153,28 +153,28 @@ st.title("")
 
 col1, col2, col3, col4, col5 = st.columns(5)
 with col1:
-    event1 = r"C:\Users\Marta\Documents\GitHub\Feverup_events_and_prices\Streamlit_app_Feverup\img\event1.png"
+    event1 = "Streamlit_app_Feverup/img/event1.png"
     st.image(event1)
     st.write("Baltimore Indoor Skydiving Experience with 2 Flights & Certificate")
     st.write("Total of events: 3808")
 with col2:
-    event2 = r"C:\Users\Marta\Documents\GitHub\Feverup_events_and_prices\Streamlit_app_Feverup\img\event2.png"
+    event2 = "Streamlit_app_Feverup/img/event2.png"
     st.image(event2)
     st.write("StreetHunt Games: Outdoor Adventure Game")
     st.write("Total of events: 3604")
 with col3:
-    event3 = r"C:\Users\Marta\Documents\GitHub\Feverup_events_and_prices\Streamlit_app_Feverup\img\event3.png"
+    event3 = "Streamlit_app_Feverup/img/event3.png"
     st.image(event3)
     st.write("British Music Experience")
     st.write("Total of events: 3343")
     
 with col4:
-    event4 = r"C:\Users\Marta\Documents\GitHub\Feverup_events_and_prices\Streamlit_app_Feverup\img\event4.png"
+    event4 = "Streamlit_app_Feverup/img/event4.png"
     st.image(event4)
     st.write("Las Vegas Escape Game Private Adventure")
     st.write("Total of events: 3149")
 with col5:
-    event5 = r"C:\Users\Marta\Documents\GitHub\Feverup_events_and_prices\Streamlit_app_Feverup\img\event5.png"
+    event5 = "Streamlit_app_Feverup/img/event5.png"
     st.image(event5)
     st.write("Gourmaze: A Dessert Treasure Hunt")
     st.write("Total of events: 2882")
