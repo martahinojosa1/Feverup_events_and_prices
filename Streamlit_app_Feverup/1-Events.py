@@ -20,7 +20,7 @@ st.set_page_config(
 )
 
 logo = "Streamlit_app_Feverup/img/logo.png"
-eventos_feverup = "Streamlit_app_Feverup/img/events.png"
+eventos_feverup = "Streamlit_app_Feverup/img/events.png" 
 
 
 #---------------------------- DATOS DE LA PÁGINA ----------------------------#
