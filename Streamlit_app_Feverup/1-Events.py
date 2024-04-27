@@ -19,12 +19,12 @@ st.set_page_config(
     layout="wide"                                        
 )
 
-logo = 'Streamlit_app_Feverup/img/logo.png'
-eventos_feverup = 'Streamlit_app_Feverup/img/events.png'
+logo = "Streamlit_app_Feverup/img/logo.png"
+eventos_feverup = "Streamlit_app_Feverup/img/events.png"
 
 
 #---------------------------- DATOS DE LA PÁGINA ----------------------------#
-link_data = 'https://docs.google.com/spreadsheets/d/1cTW5rp8av-12UuJ4zDkrqTRUDR4hokKSvWPqKl_WO3g/export?format=csv'                         # 'export?format=csv' -> añadir para que exporte correctamente desde google sheets
+link_data = "https://docs.google.com/spreadsheets/d/1cTW5rp8av-12UuJ4zDkrqTRUDR4hokKSvWPqKl_WO3g/export?format=csv"                         # 'export?format=csv' -> añadir para que exporte correctamente desde google sheets
 events = pd.read_csv(link_data)
 
 

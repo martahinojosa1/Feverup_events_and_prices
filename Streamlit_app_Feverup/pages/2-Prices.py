@@ -15,13 +15,13 @@ st.set_page_config(
     layout="wide"                                        
 )
 
-logo = 'Streamlit_app_Feverup/img/logo.png'
+logo = "Streamlit_app_Feverup/img/logo.png"
 
 
 
 
 #---------------------------- DATOS DE LA PÁGINA ----------------------------#
-link_data = 'https://docs.google.com/spreadsheets/d/1QvsVM0K2YZWGuFNoKJzaZrRFsvCtmYbMCTvf3twFCgY/export?format=csv'
+link_data = "https://docs.google.com/spreadsheets/d/1QvsVM0K2YZWGuFNoKJzaZrRFsvCtmYbMCTvf3twFCgY/export?format=csv"
 tickets = pd.read_csv(link_data)
 
 
