@@ -1,6 +1,7 @@
 #---------------------------- LIBRERÍAS ----------------------------#
 import joblib  
 import streamlit as st
+import pycaret 
 
 # Carga el modelo desde el archivo .pkl
 modelo = joblib.load("modelos/Gradient_Boosting_Regressor.pkl")
