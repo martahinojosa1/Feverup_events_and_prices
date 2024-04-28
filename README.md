@@ -10,7 +10,7 @@ In this repository, you will find two studies (both databases are samples of eve
                             
                                   
                                                                 
-Live Application!
+## Live Application!
                                       
 Do you want to explore the data on your own?
                                             
@@ -18,22 +18,22 @@ You can try it right now and play with the data, you'll see how interesting it i
                                       
                                     
                                                   
-🔍 Data Acquisition:
+##  🔍 Data Acquisition:
 The data comes from 2 datasets in the AWS marketplace. Both databases are located in the Amazon S3 (Simple Storage Service) and are independent.
 
 
 
-🔍 Notebooks Used:
+##  🔍 Notebooks Used:
 You'll find them in the 'notebooks' folder of this repository. You'll be able to visualize the complete and detailed analysis, from data preprocessing and cleaning, through the analysis of each variable, and finally the analysis of the objective theme.
 
 
 
-🧪 Skills:
+##  🧪 Skills:
 pandas, numpy, plt, os, streamlit, matplotlib, plotly, plotly-express, Power BI, Azure.
 
 
 
-🕵️‍♂️ Project Structure:
+## 🕵️‍♂️ Project Structure:
 1. Data collection and acquisition.
 2. Data cleaning and preprocessing. (VS Code).
 3. EDA (Exploratory Data Analysis).
@@ -46,5 +46,5 @@ pandas, numpy, plt, os, streamlit, matplotlib, plotly, plotly-express, Power BI,
 
 
 
-Thank you for visiting this repository!
+## Thank you for visiting this repository!
 
