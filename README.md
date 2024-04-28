@@ -41,8 +41,7 @@ pandas, numpy, plt, os, streamlit, matplotlib, plotly, plotly-express, Power BI,
 5. Creation of repository in Github.
 6. Creation of streamlit app and deployment in the cloud to visualize study results.
 7. Training Machine Learning Models to predict ticket price (Python and Azure).
-8. Implementation of Model through Endpoint (Azure).
-9. Display of price predictor after implementing the model in the Streamlit app.
+8. Display of price predictor after implementing the model in the Streamlit app.
 
 
 
