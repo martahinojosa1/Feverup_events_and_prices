@@ -9,6 +9,13 @@ modelo = joblib.load("modelos/Gradient_Boosting_Regressor.pkl")
 
 # Título predictor
 st.title('Ticket price predictor')
+st.title("")
+st.title("")
+st.title("")
+st.write("This analysis trains and explores different kinds of machine learning models for this data. You can see a brief and useful sample here:")
+st.title("")
+st.title("")
+st.title("")
 
 # Widgets para la entrada de datos
 event_category = st.selectbox('Event Category', options=['THEATER', 'TASTING', 'IGHTLIF', 'CONCERT', 'WELLNESS', 'MIX'])
@@ -27,11 +34,7 @@ if st.button('Predecir'):
     
     
 
-st.title("")
-st.title("")
-st.title("")
-st.title("")
-st.write("This analysis trains and explores different kinds of machine learning models for this data. You can see a brief and useful sample here.")
+
 st.title("")
 st.title("")
 st.title("")
