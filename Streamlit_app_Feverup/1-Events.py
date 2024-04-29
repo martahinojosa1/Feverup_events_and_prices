@@ -31,7 +31,6 @@ events = pd.read_csv(link_data)
 
 
 
-
 #---------------------------- HEADER ----------------------------#
 st.image(logo, width=200)    
 st.title("")

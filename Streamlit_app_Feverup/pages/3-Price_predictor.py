@@ -8,7 +8,8 @@ modelo = joblib.load("modelos/Gradient_Boosting_Regressor.pkl")
 
 
 # Título predictor
-st.title('Ticket price predictor')
+st.title("")
+st.markdown("<h1 style='color: #38b6ff; font-size: 52px;'>Ticket price predictor</h1>", unsafe_allow_html=True)
 st.title("")
 st.title("")
 st.title("")
