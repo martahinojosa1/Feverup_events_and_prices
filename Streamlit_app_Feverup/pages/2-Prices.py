@@ -27,7 +27,7 @@ tickets = pd.read_csv(link_data)
 
 
 #---------------------------- HEADER ----------------------------#
-st.image(logo, width=200)    
+#st.image(logo, width=200)    
 st.title("")
 st.markdown("<h1 style='color: #38b6ff; font-size: 52px;'>Ticket price analysis</h1>", unsafe_allow_html=True)
 st.title("")
