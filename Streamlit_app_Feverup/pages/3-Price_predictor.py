@@ -31,7 +31,7 @@ if st.button('Predecir'):
 }
     precio_predicho = round(modelo.predict(data)[0],2)
     print(precio_predicho) 
-    st.write(f'Predicted price: {precio_predicho} $')
+    st.write(f'Predicted price: ${precio_predicho}')
     
     
 
