@@ -13,7 +13,7 @@ st.markdown("<h1 style='color: #38b6ff; font-size: 52px;'>Ticket price predictor
 st.title("")
 st.title("")
 st.title("")
-st.write("This analysis trains and explores different kinds of machine learning models for this data. You can see a brief and useful sample here:")
+st.write("<h5>This analysis trains and explores different kinds of machine learning models for this data. You can see a brief and useful sample here:</h5>", unsafe_allow_html=True)
 st.title("")
 st.title("")
 st.title("")
