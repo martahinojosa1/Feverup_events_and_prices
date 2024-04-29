@@ -24,5 +24,17 @@ if st.button('Predecir'):
     precio_predicho = round(modelo.predict(data)[0],2)
     print(precio_predicho) 
     st.write(f'El precio predicho es: {precio_predicho}')
+    
+    
+
+st.title("")
+st.title("")
+st.title("")
+st.title("")
+st.write("This analysis trains and explores different kinds of machine learning models for this data. You can see a brief and useful sample here.")
+st.title("")
+st.title("")
+st.title("")
+st.subheader("More predictions are coming very soon!")
 
 
